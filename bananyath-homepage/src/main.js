@@ -15,7 +15,7 @@ const camera = new THREE.PerspectiveCamera(
 const renderer = new THREE.WebGLRenderer({canvas: mainCanvas, alpha: true});
 renderer.setSize( mainCanvas.width, mainCanvas.height );
 
-camera.position.z = 8;
+camera.position.z = 13;
 
 const loader = new GLTFLoader();
 
@@ -24,16 +24,18 @@ loader.load( 'src/assets/halloweenNyath.glb', function ( gltf ) {
   bananyathModel = gltf.scene;
 
 
-  /*bananyathModel.traverse((o) => {
+  bananyathModel.traverse((o) => {
     if(o.isMesh)
     {
       let toonMaterial = new THREE.MeshToonMaterial({
         color : o.material.color, 
-        map: o.material.map
+        map: o.material.map,
+        alpha: o.material.alpha,
+        DoubleSide: o.material.DoubleSide
       });
       o.material = toonMaterial;
     }
-  })*/
+  })
 
   scene.add(bananyathModel);
 
@@ -50,7 +52,7 @@ dirLight.target.position.set(0,0,0);
 scene.add(dirLight);
 scene.add(dirLight.target);
 
-const effect = new OutlineEffect( renderer, {defaultThickness: 0.005});
+const effect = new OutlineEffect( renderer, {defaultThickness: 0.0075});
 
 function animate(time)
 {
