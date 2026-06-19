@@ -20,7 +20,7 @@ camera.position.z = 13;
 
 const loader = new GLTFLoader();
 
-loader.load( 'src/assets/halloweenNyath.glb', function ( gltf ) {
+loader.load( 'models/halloweenNyath.glb', function ( gltf ) {
 
   bananyathModel = gltf.scene;
 
