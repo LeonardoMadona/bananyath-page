@@ -1,10 +1,18 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
 
 .great-vibes-regular {
   font-family: "Great Vibes", cursive;
   font-weight: 400;
   font-style: normal;
+}
+
+.noto-sans-display {
+  font-family: "Noto Sans Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 
 #main-container{
@@ -13,8 +21,30 @@
     align-items: center;
 }
 
-canvas{
-    background-color: rgba(0, 0, 0, 0);
+#canvas1{
+    background: #badede;
+    background: radial-gradient(circle,rgb(241, 229, 217) 0%, rgb(0, 0, 0, 0) 55%);
+}
+
+#canvas2{
+    background: black;
+
+    border-radius: 10px;
+}
+
+#area-1{
+    background-color: #a9caec;
+}
+
+#area-2{
+    padding: 50px 0 30px 0;
+    border-top: solid 1px rgb(175, 175, 175);
+
+}
+
+#area-3{
+    padding: 0px 0 10px 0;
+    flex-direction: column;
 }
 
 .outlined{
@@ -25,30 +55,149 @@ canvas{
 
 body{
     margin: 0;
-    background-color: rgb(21, 21, 24);
+    background-color: rgb(246, 246, 248);
+}
+
+.flex-row{
+    display: flex;
+    width: 100%;
+}
+
+.flex-column{
+    display:flex;
+    flex-direction: column;
+}
+
+.center-content{
+    align-content: center;
+    vertical-align: middle;
+    text-align: center;
+    justify-content: center;
 }
 
 .header{
     width:100%;
 
     align-items: center;
-    text-align: center;
-    justify-content: center;   
 
+    border-bottom: solid 1px rgb(175, 175, 175);
+    flex-direction: column;
 
     display:flex;    
 }
 
+.rounded-window{
+    border-radius: 15px;
+    width: 80vw;
+    padding: 20px;
+
+    background-color: rgb(236, 235, 243);
+    box-shadow: 0px 5px 10px rgb(58, 58, 58);
+
+    
+    justify-content: center;
+    gap:75px;
+}
+
+
+.carrousel-container{
+    min-width: 450px; 
+    height: 450px; 
+    background-color: black;
+    border-radius: 10px;
+}
+
 h1{
     font-size: 100pt;
-    color: rgb(226, 197, 99);
+    color: rgb(34, 34, 34);
     font-family: "Great Vibes", cursive;
     font-weight: 400;
     font-style: normal;
 
-    margin: 40px 0;
+    margin: 40px 0 15px 0;
+}
 
-    text-shadow: 3px 3px 5px rgba(184, 172, 123, 0.555);
+h2{
+    font-size: 40pt;
+    font-family: "Noto Sans Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    margin: 0 20px 10px 20px ;
+}
+h3{
+    font-size: 24pt;
+    font-family: "Noto Sans Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    margin: 0;
+    padding: 6px;
+}
+
+p{
+    font-size: 10pt;
+    font-family: "Noto Sans Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    margin: 0;
+    padding: 6px;
+}
+
+#customize-button{
+    max-width: 250px;
+
+    border-radius: 10px;
+    border-width: 1px;
+    padding: 20px 15px;
+
+    margin: 10px 0 30px 0;
+
+    line-height: 20px;
+
+    align-self: center;
+
+    font-size: 11pt;
+    font-family: "Noto Sans Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    background-color: #9ac0e6;
+    color: rgb(27, 27, 27);
+
+    transition-duration: .1s;
+}
+
+#customize-button:hover{
+    background-color: #416f9c;
+    color: rgb(231, 230, 230);
+
+    box-shadow: rgb(88, 88, 88) 0px 5px 10px;
+
+    transition-duration: .1s;
+}
+
+#customize-button:active{
+    background-color: #3a575c;
+    color: rgb(231, 230, 230);
+
+    
+}
+
+li{
+    font-size: 13pt;
+    font-family: "Noto Sans Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    margin: 0;
+    line-height: 40px;
+}
+
+li::marker{
+    font-size: 0.8rem;
 }
 
 .d-r{
