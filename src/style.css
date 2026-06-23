@@ -103,8 +103,11 @@ body{
 .carrousel-container{
     min-width: 450px; 
     height: 450px; 
-    background-color: black;
-    border-radius: 10px;
+}
+
+.carrousel-screen{
+    min-width: 350px; 
+    height: 350px; 
 }
 
 h1{
@@ -202,4 +205,18 @@ li::marker{
 
 .d-r{
     background-color: red;
+}
+
+.b-r{
+    border: solid;
+    border-width: 1px;
+    border-color: red;
+}
+
+.d-bl{
+    background-color: black;
+}
+
+.d-b{
+    background-color: blue;
 }
