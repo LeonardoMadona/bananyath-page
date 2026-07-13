@@ -23,7 +23,7 @@
 
 #canvas1{
     background: #badede;
-    background: radial-gradient(circle,rgb(241, 229, 217) 0%, rgb(0, 0, 0, 0) 55%);
+    background: radial-gradient(circle,rgb(255, 249, 243) 0%, rgb(0, 0, 0, 0) 55%);
 }
 
 #canvas2{
@@ -33,7 +33,7 @@
 }
 
 #area-1{
-    background-color: #a9caec;
+    background-color: #a3c9f0;
 }
 
 #area-2{
@@ -63,6 +63,10 @@ body{
     width: 100%;
 }
 
+.flex{
+    display: flex;
+}
+
 .flex-column{
     display:flex;
     flex-direction: column;
@@ -86,6 +90,7 @@ body{
     flex-direction: column;
 
     display:flex;    
+
 }
 
 .rounded-window{
@@ -111,15 +116,24 @@ body{
     width: 350px; 
     height: 350px; 
 
-    justify-content: left;
+    border-radius: 20px;
 
-    overflow-x: hidden;
+    overflow: hidden;
+}
+
+#images-holder{
+    display: flex; /*<- THIS IS WHAT IS MAKING THE IMAGES ALIGN ON THE LEFT*/
+
+    transition: transform .4s ease;
 }
 
 
 .carrousel-image{
     width:100%;
     height: 100%;
+
+    padding: 0;
+    margin: 0;
 }
 
 .carrousel-button{
