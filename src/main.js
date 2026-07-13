@@ -14,6 +14,8 @@ const camera = new THREE.PerspectiveCamera(
   1000
 );
 const renderer = new THREE.WebGLRenderer({canvas: mainCanvas, alpha: true, antialias:true});
+
+
 renderer.setSize( mainCanvas.width, mainCanvas.height );
 
 camera.position.z = 13;
@@ -52,7 +54,7 @@ dirLight.target.position.set(0,0,0);
 scene.add(dirLight);
 scene.add(dirLight.target);
 
-const effect = new OutlineEffect( renderer, {defaultThickness: 0.0075});
+const effect = new OutlineEffect( renderer, {defaultThickness: 0.003});
 
 function animate(time)
 {
@@ -63,16 +65,11 @@ function animate(time)
 
     let scaleFactor = 1 + ((Math.sin(time / 3500) + 1) / 2) * .15;
 
-    bananyathModel.scale.set(scaleFactor, scaleFactor, scaleFactor);
+    bananyathModel.scale.setScalar(scaleFactor);
   }
-
-  //renderer.render(scene, camera);
+  
   effect.render( scene, camera);
 }
 
 renderer.setAnimationLoop(animate);
-
-function Customize() {
-  console.log('teste');
-}
 
