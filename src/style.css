@@ -123,6 +123,7 @@ body{
 
 #images-holder{
     display: flex; /*<- THIS IS WHAT IS MAKING THE IMAGES ALIGN ON THE LEFT*/
+    flex: 0 100%;
 
     transition: transform .4s ease;
 }
