@@ -15,8 +15,29 @@ const camera = new THREE.PerspectiveCamera(
 );
 const renderer = new THREE.WebGLRenderer({canvas: mainCanvas, alpha: true, antialias:true});
 
+// CANVAS
+const canvasSizes = {
+    width: mainCanvas.clientWidth,
+    height: mainCanvas.clientHeight
+}
 
-renderer.setSize( mainCanvas.width, mainCanvas.height );
+// Resize event
+window.addEventListener('resize', () => {
+    // Update sizes
+    canvasSizes.width = mainCanvas.clientWidth
+    canvasSizes.height = mainCanvas.clientHeight
+
+    // Update camera
+    camera.aspect = canvasSizes.width / canvasSizes.height
+    camera.updateProjectionMatrix()
+
+    // Update render
+    renderer.setSize(canvasSizes.width, canvasSizes.height)
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+})
+
+
+renderer.setSize( mainCanvas.clientWidth, mainCanvas.clientHeight );
 
 camera.position.z = 13;
 

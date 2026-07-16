@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
+
+.great-vibes-regular {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.noto-sans-display {
+  font-family: "Noto Sans Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+#main-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#canvas-3d{
+    background-color: black;
+}

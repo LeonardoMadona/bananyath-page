@@ -21,9 +21,21 @@
     align-items: center;
 }
 
+.header{
+    width:100%;
+
+    align-items: center;
+
+    border-bottom: solid 1px rgb(175, 175, 175);
+    flex-direction: column;
+
+    display:flex;    
+
+}
+
 #canvas1{
-    background: #badede;
-    background: radial-gradient(circle,rgb(255, 249, 243) 0%, rgb(0, 0, 0, 0) 55%);
+    background: radial-gradient(circle,rgb(255, 249, 243) 0%, rgb(0, 0, 0, 0) 55%);   
+    
 }
 
 #canvas2{
@@ -34,12 +46,41 @@
 
 #area-1{
     background-color: #a3c9f0;
+    display: flex;    
 }
+
 
 #area-2{
     padding: 50px 0 30px 0;
     border-top: solid 1px rgb(175, 175, 175);
+}
 
+@media screen and (max-aspect-ratio: 5/7){
+    #area-1{
+        display: flex;
+        background-color: #a3c9f0;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    #canvas1{
+        max-width: 100%;
+        min-height: 60vh;
+        box-sizing: border-box;
+    }
+
+    .header h1{
+        font-size: 60pt;
+        max-width: 100%;
+    }
+
+
+    .rounded-window{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
 }
 
 #area-3{
@@ -67,6 +108,10 @@ body{
     display: flex;
 }
 
+.m-a{
+    margin: auto;
+}
+
 .flex-column{
     display:flex;
     flex-direction: column;
@@ -81,21 +126,9 @@ body{
     justify-content: center;
 }
 
-.header{
-    width:100%;
-
-    align-items: center;
-
-    border-bottom: solid 1px rgb(175, 175, 175);
-    flex-direction: column;
-
-    display:flex;    
-
-}
-
 .rounded-window{
     border-radius: 15px;
-    width: 80vw;
+    max-width: 120vh;
     padding: 20px;
 
     background-color: rgb(236, 235, 243);
@@ -107,14 +140,10 @@ body{
 }
 
 
-.carrousel-container{
-    min-width: 450px; 
-    height: 450px; 
-}
-
 .carrousel-screen{
-    width: 350px; 
-    height: 350px; 
+    aspect-ratio: 1;
+
+    max-height: 50vh;
 
     border-radius: 20px;
 
@@ -150,11 +179,13 @@ body{
 }
 
 h1{
-    font-size: 100pt;
+    font-size: 80pt;
     color: rgb(34, 34, 34);
     font-family: "Great Vibes", cursive;
     font-weight: 400;
     font-style: normal;
+
+    text-size-adjust: auto;
 
     margin: 40px 0 15px 0;
 }
@@ -190,24 +221,28 @@ p{
 #customize-button{
     max-width: 250px;
 
+    border-style: solid;
     border-radius: 15px;
     border-width: 1px;
-    border-color: rgb(156, 156, 156);
+    border-color: rgb(36, 44, 65);
     padding: 25px 30px;
 
-    margin: 10px 0 30px 0;
+    margin: 50px 0 30px 0;
 
 
     align-self: center;
 
-    font-size: 11pt;
+    font-size: 10pt;
     font-family: "Noto Sans Display", sans-serif;
     font-optical-sizing: auto;
+    letter-spacing: 0.05rem;
     font-weight: 400;
     font-style: normal;
 
-    background-color: #9ac0e6;
-    color: rgb(27, 27, 27);
+    box-sizing: content-box;
+
+    background-color: #3e5a79;
+    color: rgb(228, 224, 224);
 
     transition-duration: .1s;
 }

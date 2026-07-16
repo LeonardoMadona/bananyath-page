@@ -18,10 +18,20 @@ window.addEventListener("load", ()=>{
         document.getElementById("carrousel-next").addEventListener('click', () => {
             MoveCarrousel(1);
         })
+
+        window.addEventListener("resize", () => {
+            MoveCarrousel(0);
+        })
     }
     else if(page =='customize.html')
     {
         //do customize page stuff
+
+        let colorPicker = document.getElementById("bg-color-picker");
+
+        colorPicker.addEventListener("change", () => {
+            document.getElementById("canvas-3d").style.backgroundColor = colorPicker.value;
+        })
     }
 
 })
@@ -75,7 +85,5 @@ function MoveCarrousel( direction )
     var imageHolder = document.getElementById('images-holder');
 
     imageHolder.style.transform = `translateX(-${carrouselIndex * imageHolder.parentElement.clientWidth}px)`;
-
-    console.log('moving with offset ' + direction);
 
 }

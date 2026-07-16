@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customize</title>
+    
+    <link href='/src/style2.css' rel="stylesheet">
 
     <script type="module" src="/src/script.js"></script>
     <script type="module" src="/src/customize-main.js"></script>
 </head>
 <body>
-    <div id="3d-canvas">
-        
+    <div id="main-container">
+        <div id="canvas-container">
+            <canvas id="canvas-3d" width="500px" height="500px"></canvas>
+        </div>
+
+        <input id="bg-color-picker" type="color">Background Color</input>
     </div>
 </body>
 </html>
