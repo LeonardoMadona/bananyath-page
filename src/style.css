@@ -35,7 +35,7 @@
 
 #canvas1{
     background: radial-gradient(circle,rgb(255, 249, 243) 0%, rgb(0, 0, 0, 0) 55%);   
-    
+    max-width: 50%;
 }
 
 #canvas2{
@@ -49,6 +49,13 @@
     display: flex;    
 }
 
+.showcase-text{
+    padding-bottom: 100px; 
+    padding-right: 20px; 
+    padding-left: 20px; 
+    box-sizing: border-box;
+}
+
 
 #area-2{
     padding: 50px 0 30px 0;
@@ -60,8 +67,19 @@
         display: flex;
         background-color: #a3c9f0;
         flex-direction: column;
-        align-items: center;
-        
+        align-items: center;            
+    }
+
+    #area-1 .showcase-text{
+        padding: 0 15px;
+        margin-bottom: 40px;
+    }
+
+    #area-1 h2{
+        font-size: 35pt;
+    }
+    #area-1 h3{
+        font-size: 22pt;
     }
 
     #canvas1{
@@ -80,10 +98,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 15px;
     }
 }
 
 #area-3{
+    margin-top: 30px;
     padding: 0px 0 10px 0;
     flex-direction: column;
 }
@@ -179,15 +199,15 @@ body{
 }
 
 h1{
-    font-size: 80pt;
+    font-size: 65pt;
     color: rgb(34, 34, 34);
     font-family: "Great Vibes", cursive;
     font-weight: 400;
-    font-style: normal;
+    font-style: italic;
 
     text-size-adjust: auto;
 
-    margin: 40px 0 15px 0;
+    margin: 20px 0 15px 0;
 }
 
 h2{
@@ -227,7 +247,7 @@ p{
     border-color: rgb(36, 44, 65);
     padding: 25px 30px;
 
-    margin: 50px 0 30px 0;
+    margin: 30px 0;
 
 
     align-self: center;
