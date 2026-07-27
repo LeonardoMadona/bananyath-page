@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OutlineEffect } from 'three/addons/effects/OutlineEffect.js';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+import { PI } from 'three/tsl';
 
 var hat_models = [];
 var glasses_models = [];
@@ -42,10 +43,6 @@ const canvasSizes = {
 
 // Resize event
 window.addEventListener('resize', () => {
-    ResetCamera();
-})
-
-window.addEventListener('load', () => {
     ResetCamera();
 })
 
@@ -124,8 +121,8 @@ loader.load( 'models/bananyath-three-js.glb', function ( gltf ) {
   })
 
   scene.add(bananyathModel);
-
-  bananyathModel.rotation.y= - 3.14159265 * 0.5;
+  bananyathModel.rotation.y = -PI * 0.5;
+  ResetCamera();
 
 }, undefined, function (error) {
 

@@ -26,10 +26,6 @@ window.addEventListener('resize', () => {
   ResetCamera();
 })
 
-window.addEventListener('load', () => {
-  ResetCamera();
-})
-
 function ResetCamera()
 {
   canvasSizes.width = mainCanvas.clientWidth;
@@ -69,6 +65,7 @@ loader.load( 'models/halloweenNyath.glb', function ( gltf ) {
   })
 
   scene.add(bananyathModel);
+  ResetCamera();
 
 }, undefined, function (error) {
 
