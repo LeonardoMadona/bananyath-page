@@ -26,12 +26,6 @@ window.addEventListener("load", ()=>{
     else if(page =='customize.html')
     {
         //do customize page stuff
-
-        let colorPicker = document.getElementById("bg-color-picker");
-
-        colorPicker.addEventListener("change", () => {
-            document.getElementById("canvas-3d").style.backgroundColor = colorPicker.value;
-        })
     }
 
 })

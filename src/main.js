@@ -24,16 +24,16 @@ const canvasSizes = {
 // Resize event
 window.addEventListener('resize', () => {
     // Update sizes
-    canvasSizes.width = mainCanvas.clientWidth
-    canvasSizes.height = mainCanvas.clientHeight
+    canvasSizes.width = mainCanvas.clientWidth;
+    canvasSizes.height = mainCanvas.clientHeight;
 
     // Update camera
-    camera.aspect = canvasSizes.width / canvasSizes.height
-    camera.updateProjectionMatrix()
+    camera.aspect = canvasSizes.width / canvasSizes.height;
+    camera.updateProjectionMatrix();
 
     // Update render
-    renderer.setSize(canvasSizes.width, canvasSizes.height)
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+    renderer.setSize(canvasSizes.width, canvasSizes.height);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 })
 
 
