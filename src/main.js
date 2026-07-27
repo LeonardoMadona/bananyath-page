@@ -16,7 +16,7 @@ const camera = new THREE.PerspectiveCamera(
 const renderer = new THREE.WebGLRenderer({canvas: mainCanvas, alpha: true, antialias:true});
 
 // CANVAS
-const canvasSizes = {
+let canvasSizes = {
     width: mainCanvas.clientWidth,
     height: mainCanvas.clientHeight
 }
@@ -24,6 +24,13 @@ const canvasSizes = {
 // Resize event
 window.addEventListener('resize', () => {
   ResetCamera();
+})
+
+window.addEventListener( 'load', () => {
+  let rendSize = new THREE.Vector2();
+  renderer.getSize(rendSize);
+  console.log("canvas dimensions = [" + mainCanvas.clientWidth + ", " + mainCanvas.clientHeight + "]");
+  console.log('renderer size = ' + rendSize.x + ", " + rendSize.y);
 })
 
 function ResetCamera()
@@ -39,7 +46,6 @@ function ResetCamera()
   renderer.setSize(canvasSizes.width, canvasSizes.height);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 }
-
 
 renderer.setSize( mainCanvas.clientWidth, mainCanvas.clientHeight );
 

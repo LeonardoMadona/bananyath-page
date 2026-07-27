@@ -36,7 +36,7 @@ scene.background = new THREE.Color(colorPicker.value);
 
 
 // CANVAS
-const canvasSizes = {
+let canvasSizes = {
     width: mainCanvas.clientWidth,
     height: mainCanvas.clientHeight
 }
@@ -121,7 +121,7 @@ loader.load( 'models/bananyath-three-js.glb', function ( gltf ) {
   })
 
   scene.add(bananyathModel);
-  bananyathModel.rotation.y = -PI * 0.5;
+  bananyathModel.rotation.y = - 3.14159265 * 0.5;
   ResetCamera();
 
 }, undefined, function (error) {
