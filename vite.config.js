@@ -3,7 +3,8 @@ import { resolve } from 'path'
 
 export default defineConfig({
   plugins: [],
-  base: '/bananyath-page/', 
+  base: '/bananyath-page/',
+
   build: {
     rollupOptions: {
       input: {
@@ -12,4 +13,5 @@ export default defineConfig({
       },
     },
   }
+  
 })
